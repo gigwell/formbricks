@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint . --config .eslintrc.cjs --ext .ts,.tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "PORT_APP_STORYBOOK=`dotenv -e ../../.env -p PORT_APP_STORYBOOK` && storybook dev -p $PORT_APP_STORYBOOK",
     "build-storybook": "storybook build",
     "clean": "rimraf .turbo node_modules dist storybook-static"
   },

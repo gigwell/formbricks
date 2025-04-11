@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "clean": "rimraf .turbo node_modules .next",
-    "dev": "next dev -p 3002 --turbopack",
-    "go": "next dev -p 3002 --turbopack",
+    "dev": "PORT_APP_DEMO=`dotenv -e ../../.env -p PORT_APP_DEMO` && next dev -p $PORT_APP_DEMO --turbopack",
+    "go": "PORT_APP_DEMO=`dotenv -e ../../.env -p PORT_APP_DEMO` && next dev -p $PORT_APP_DEMO --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
